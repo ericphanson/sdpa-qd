@@ -1178,26 +1178,26 @@ void IO::printLastInfo(int pIteration,
     #if REVERSE_PRIMAL_DUAL
     qd_real mtmp1 = -solveInfo.objValDual;
     qd_real mtmp2 = -solveInfo.objValPrimal;
-    fprintf(Display, "objValPrimal = %10.16e\n",
+    fprintf(Display, "objValPrimal = %+16.71e\n",
 	    mtmp1.x[0]);
-    fprintf(Display, "objValDual   = %10.16e\n",
+    fprintf(Display, "objValDual   = %+16.71e\n",
 	    mtmp2.x[0]);
-    fprintf(Display, "p.feas.error = %10.16e\n",
+    fprintf(Display, "p.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(Display, "d.feas.error = %10.16e\n",
+    fprintf(Display, "d.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(Display, "relative eps = %10.16e\n",
+    fprintf(Display, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #else
-    fprintf(Display, "objValPrimal = %10.16e\n",
+    fprintf(Display, "objValPrimal = %+16.71e\n",
 	    solveInfo.objValPrimal.x[0]);
-    fprintf(Display, "objValDual   = %10.16e\n",
+    fprintf(Display, "objValDual   = %+16.71e\n",
 	    solveInfo.objValDual.x[0]);
-    fprintf(Display, "p.feas.error = %10.16e\n",
+    fprintf(Display, "p.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(Display, "d.feas.error = %10.16e\n",
+    fprintf(Display, "d.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(Display, "relative eps = %10.16e\n",
+    fprintf(Display, "relative eps = %+16.71e\n",
             dlamchE().x[0]);
     #endif
     if (printTime == true) {
@@ -1233,26 +1233,26 @@ void IO::printLastInfo(int pIteration,
     #if REVERSE_PRIMAL_DUAL
     qd_real mtmp1=-solveInfo.objValDual;
     qd_real mtmp2=-solveInfo.objValPrimal;
-    fprintf(fpout, "objValPrimal = %10.16e\n",
+    fprintf(fpout, "objValPrimal = %+16.71e\n",
 	    mtmp1.x[0]);
-    fprintf(fpout, "objValDual   = %10.16e\n",
+    fprintf(fpout, "objValDual   = %+16.71e\n",
 	    mtmp2.x[0]);
-    fprintf(fpout, "p.feas.error = %10.16e\n",
+    fprintf(fpout, "p.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(fpout, "d.feas.error = %10.16e\n",
+    fprintf(fpout, "d.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(fpout, "relative eps = %10.16e\n",
+    fprintf(fpout, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #else
-    fprintf(fpout, "objValPrimal = %10.16e\n",
+    fprintf(fpout, "objValPrimal = %+16.71e\n",
 	    solveInfo.objValPrimal.x[0]);
-    fprintf(fpout, "objValDual   = %10.16e\n",
+    fprintf(fpout, "objValDual   = %+16.71e\n",
 	    solveInfo.objValDual.x[0]);
-    fprintf(fpout, "p.feas.error = %10.16e\n",
+    fprintf(fpout, "p.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(fpout, "d.feas.error = %10.16e\n",
+    fprintf(fpout, "d.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(fpout, "relative eps = %10.16e\n",
+    fprintf(fpout, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #endif
     fprintf(fpout, "total time   = %.3f\n",cputime);
@@ -1420,22 +1420,22 @@ void IO::printLastInfo(int pIteration,
     cout.precision(48);
     fprintf(Display, "objValPrimal = "); cout << mtmp1 << endl;
     fprintf(Display, "objValDual   = "); cout << mtmp2 << endl;
-    fprintf(Display, "p.feas.error = %10.16e\n",
+    fprintf(Display, "p.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(Display, "d.feas.error = %10.16e\n",
+    fprintf(Display, "d.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(Display, "relative eps = %10.16e\n",
+    fprintf(Display, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #else
-    fprintf(Display, "objValPrimal = %10.16e\n",
+    fprintf(Display, "objValPrimal = %+16.71e\n",
 	    solveInfo.objValPrimal.x[0]);
-    fprintf(Display, "objValDual   = %10.16e\n",
+    fprintf(Display, "objValDual   = %+16.71e\n",
 	    solveInfo.objValDual.x[0]);
-    fprintf(Display, "p.feas.error = %10.16e\n",
+    fprintf(Display, "p.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(Display, "d.feas.error = %10.16e\n",
+    fprintf(Display, "d.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(Display, "relative eps = %10.16e\n",
+    fprintf(Display, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #endif
     if (printTime == true) {
@@ -1471,26 +1471,26 @@ void IO::printLastInfo(int pIteration,
     #if REVERSE_PRIMAL_DUAL
     qd_real mtmp1=-solveInfo.objValDual;
     qd_real mtmp2=-solveInfo.objValPrimal;
-    fprintf(fpout, "objValPrimal = %10.16e\n",
+    fprintf(fpout, "objValPrimal = %+16.71e\n",
 	    mtmp1.x[0]);
-    fprintf(fpout, "objValDual   = %10.16e\n",
+    fprintf(fpout, "objValDual   = %+16.71e\n",
 	    mtmp2.x[0]);
-    fprintf(fpout, "p.feas.error = %10.16e\n",
+    fprintf(fpout, "p.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(fpout, "d.feas.error = %10.16e\n",
+    fprintf(fpout, "d.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(fpout, "relative eps = %10.16e\n",
+    fprintf(fpout, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #else
-    fprintf(fpout, "objValPrimal = %10.16e\n",
+    fprintf(fpout, "objValPrimal = %+16.71e\n",
 	    solveInfo.objValPrimal.x[0]);
-    fprintf(fpout, "objValDual   = %10.16e\n",
+    fprintf(fpout, "objValDual   = %+16.71e\n",
 	    solveInfo.objValDual.x[0]);
-    fprintf(fpout, "p.feas.error = %10.16e\n",
+    fprintf(fpout, "p.feas.error = %+16.71e\n",
 	    currentRes.normPrimalVec.x[0]);
-    fprintf(fpout, "d.feas.error = %10.16e\n",
+    fprintf(fpout, "d.feas.error = %+16.71e\n",
 	    currentRes.normDualMat.x[0]);
-    fprintf(fpout, "relative eps = %10.16e\n",
+    fprintf(fpout, "relative eps = %+16.71e\n",
             Rlamch_qd("E").x[0]);
     #endif
     fprintf(fpout, "total time   = %.3f\n",cputime);
